@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'rust_chip_8_vm'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rust_chip_8_vm",
+                    "--package=rust_chip_8_vm"
+                ],
+                "filter": {
+                    "name": "rust_chip_8_vm",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'rust_chip_8_vm'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=rust_chip_8_vm",
+                    "--package=rust_chip_8_vm"
+                ],
+                "filter": {
+                    "name": "rust_chip_8_vm",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
